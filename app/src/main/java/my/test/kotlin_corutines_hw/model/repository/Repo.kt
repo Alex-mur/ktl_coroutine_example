@@ -15,11 +15,11 @@ object Repo : IRepo {
         .build()
         .create(IDataSource::class.java)
 
-    override suspend fun getLastLaunches(): Deferred<List<Launch>> {
+    override suspend fun getLastLaunchesAsync(): Deferred<List<Launch>> {
         return dataSource.getLastLaunches()
     }
 
-    override suspend fun getLaunch(launchNumber: Int): Deferred<Launch> {
+    override suspend fun getLaunchAsync(launchNumber: Int): Deferred<Launch> {
         return dataSource.getLaunch(launchNumber)
     }
 
