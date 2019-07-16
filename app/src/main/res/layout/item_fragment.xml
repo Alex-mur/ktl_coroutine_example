@@ -7,8 +7,11 @@
         tools:context=".ui.ItemFragment">
 
     <TextView
+            android:id="@+id/tv_test"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Hello"/>
+            android:text="Hello"
+            android:layout_marginTop="200dp"
+            android:textAlignment="center"/>
 
 </FrameLayout>

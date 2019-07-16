@@ -1,7 +1,7 @@
-package my.test.kotlin_corutines_hw.model.api
+package my.test.kotlin_coroutines_hw.model.api
 
 import kotlinx.coroutines.Deferred
-import my.test.kotlin_corutines_hw.model.entity.Launch
+import my.test.kotlin_coroutines_hw.model.entity.Launch
 import retrofit2.http.GET
 import retrofit2.http.Path
 

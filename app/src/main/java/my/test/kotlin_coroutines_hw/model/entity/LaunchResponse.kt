@@ -1,4 +1,4 @@
-package my.test.kotlin_corutines_hw.model.entity
+package my.test.kotlin_coroutines_hw.model.entity
 
 data class Launch(
     val crew: Any,

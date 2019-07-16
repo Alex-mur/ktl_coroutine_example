@@ -1,4 +1,4 @@
-package my.test.kotlin_corutines_hw
+package my.test.kotlin_coroutines_hw
 
 import org.junit.Test
 

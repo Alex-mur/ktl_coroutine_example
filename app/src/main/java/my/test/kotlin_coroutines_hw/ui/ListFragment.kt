@@ -1,4 +1,4 @@
-package my.test.kotlin_corutines_hw.ui
+package my.test.kotlin_coroutines_hw.ui
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
@@ -7,17 +7,14 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.list_fragment.*
 
-import my.test.kotlin_corutines_hw.R
-import my.test.kotlin_corutines_hw.viewmodel.ListViewModel
+import my.test.kotlin_coroutines_hw.R
+import my.test.kotlin_coroutines_hw.viewmodel.ListViewModel
 import java.lang.StringBuilder
 
 class ListFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = ListFragment()
-    }
 
     private lateinit var viewModel: ListViewModel
 
@@ -41,6 +38,8 @@ class ListFragment : Fragment() {
             }
         })
         viewModel.loadData()
+
+        btn_next.setOnClickListener { findNavController().navigate(R.id.action_listFragment_to_itemFragment) }
 
     }
 

@@ -1,9 +1,9 @@
-package my.test.kotlin_corutines_hw.model.repository
+package my.test.kotlin_coroutines_hw.model.repository
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import kotlinx.coroutines.Deferred
-import my.test.kotlin_corutines_hw.model.api.IDataSource
-import my.test.kotlin_corutines_hw.model.entity.Launch
+import my.test.kotlin_coroutines_hw.model.api.IDataSource
+import my.test.kotlin_coroutines_hw.model.entity.Launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
