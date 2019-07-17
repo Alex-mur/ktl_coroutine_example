@@ -8,27 +8,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.list_fragment.*
+import kotlinx.android.synthetic.main.launch_list_fragment.*
 
 import my.test.kotlin_coroutines_hw.R
-import my.test.kotlin_coroutines_hw.viewmodel.ListViewModel
+import my.test.kotlin_coroutines_hw.viewmodel.LaunchListViewModel
 import java.lang.StringBuilder
 
-class ListFragment : Fragment() {
+class LaunchListFragment : Fragment() {
 
-    private lateinit var viewModel: ListViewModel
+    private lateinit var viewModelLaunch: LaunchListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.list_fragment, container, false)
+        return inflater.inflate(R.layout.launch_list_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(ListViewModel::class.java)
-        viewModel.getLaunchList().observe(this, Observer { data ->
+        viewModelLaunch = ViewModelProviders.of(this).get(LaunchListViewModel::class.java)
+        viewModelLaunch.getLaunchList().observe(this, Observer { data ->
             if (data?.e != null) {
                 tv_test.text = data.e.message
             } else {
@@ -37,7 +37,7 @@ class ListFragment : Fragment() {
                 tv_test.text = sb.toString()
             }
         })
-        viewModel.loadData()
+        viewModelLaunch.loadData()
 
         btn_next.setOnClickListener { findNavController().navigate(R.id.action_listFragment_to_itemFragment) }
 

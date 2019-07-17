@@ -11,7 +11,7 @@ import my.test.kotlin_coroutines_hw.model.entity.Launch
 import my.test.kotlin_coroutines_hw.model.repository.Repo
 import java.lang.Exception
 
-class ItemViewModel : ViewModel() {
+class LaunchViewModel : ViewModel() {
     private val repo = Repo
     private val launchLiveData = MutableLiveData<DataWrapper<Launch>>()
 

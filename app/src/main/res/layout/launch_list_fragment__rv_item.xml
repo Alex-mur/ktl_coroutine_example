@@ -16,6 +16,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:padding="10dp"
+                android:src="@drawable/ic_android_orange_24dp"
                 app:layout_constraintWidth_percent="0.18"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintStart_toStartOf="parent"

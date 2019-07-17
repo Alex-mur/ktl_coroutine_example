@@ -7,9 +7,9 @@
 
     <fragment
             android:id="@+id/listFragment"
-            android:name="my.test.kotlin_coroutines_hw.ui.ListFragment"
+            android:name="my.test.kotlin_coroutines_hw.ui.LaunchListFragment"
             android:label="list_fragment"
-            tools:layout="@layout/list_fragment">
+            tools:layout="@layout/launch_list_fragment">
 
         <action
                 android:id="@+id/action_listFragment_to_itemFragment"
@@ -20,8 +20,8 @@
 
     <fragment
             android:id="@+id/itemFragment"
-            android:name="my.test.kotlin_coroutines_hw.ui.ItemFragment"
+            android:name="my.test.kotlin_coroutines_hw.ui.LaunchFragment"
             android:label="item_fragment"
-            tools:layout="@layout/item_fragment"/>
+            tools:layout="@layout/launch_fragment"/>
 
 </navigation>
