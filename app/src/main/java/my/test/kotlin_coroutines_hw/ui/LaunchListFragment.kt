@@ -4,19 +4,22 @@ import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import android.widget.Toast
+import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.launch_list_fragment.*
 
 import my.test.kotlin_coroutines_hw.R
+import my.test.kotlin_coroutines_hw.ui.adapter.LaunchListRVAdapter
 import my.test.kotlin_coroutines_hw.viewmodel.LaunchListViewModel
-import java.lang.StringBuilder
 
 class LaunchListFragment : Fragment() {
 
-    private lateinit var viewModelLaunch: LaunchListViewModel
+    private lateinit var viewModelLaunchList: LaunchListViewModel
+    private lateinit var rvAdapter : LaunchListRVAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,20 +30,22 @@ class LaunchListFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModelLaunch = ViewModelProviders.of(this).get(LaunchListViewModel::class.java)
-        viewModelLaunch.getLaunchList().observe(this, Observer { data ->
-            if (data?.e != null) {
-                tv_test.text = data.e.message
-            } else {
-                val sb = StringBuilder()
-                data?.data?.forEach { sb.append(it.mission_name) }
-                tv_test.text = sb.toString()
-            }
-        })
-        viewModelLaunch.loadData()
-
-        btn_next.setOnClickListener { findNavController().navigate(R.id.action_listFragment_to_itemFragment) }
-
+        initViewModel()
     }
 
+    private fun initRV() {
+        rvAdapter = LaunchListRVAdapter(viewModelLaunchList.launchListRVPresenter)
+        rv_launch_list.layoutManager = LinearLayoutManager(context)
+        rv_launch_list.adapter = rvAdapter
+    }
+
+    private fun initViewModel() {
+        viewModelLaunchList = ViewModelProviders.of(this).get(LaunchListViewModel::class.java)
+        viewModelLaunchList.getLaunchList().observe(this, Observer { data ->
+            data?.e?.message?.let { Toast.makeText(context, it, Toast.LENGTH_LONG).show() }
+            data?.data?.let { rvAdapter.notifyDataSetChanged() }
+        })
+        initRV()
+        viewModelLaunchList.loadData()
+    }
 }

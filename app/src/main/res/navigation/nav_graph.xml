@@ -22,6 +22,7 @@
             android:id="@+id/itemFragment"
             android:name="my.test.kotlin_coroutines_hw.ui.LaunchFragment"
             android:label="item_fragment"
-            tools:layout="@layout/launch_fragment"/>
+            tools:layout="@layout/launch_fragment">
+    </fragment>
 
 </navigation>

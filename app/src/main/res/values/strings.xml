@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">kotlin-corutines-hw</string>
+    <string name="list_fragment__title">SpaceX past launches</string>
+    <string name="site_name">Site name</string>
+    <string name="rocket_name">Rocket name</string>
+    <string name="launch_date">Launch date</string>
+    <string name="launch_success">Launch success</string>
+    <string name="details">Details</string>
+    <string name="photo">Photo</string>
+    <string name="launch_image">Launch image</string>
 </resources>

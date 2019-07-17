@@ -7,7 +7,7 @@ import retrofit2.http.Path
 
 interface IDataSource {
 
-    @GET("/v3/launches/upcoming")
+    @GET("/v3/launches/past")
     fun getLastLaunches() : Deferred<List<Launch>>
 
     @GET("/v3/launches/{launchNumber}")

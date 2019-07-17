@@ -1,17 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
         tools:context=".ui.LaunchFragment">
 
     <TextView
-            android:id="@+id/tv_test"
+            android:id="@+id/tv_title"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Hello"
-            android:layout_marginTop="200dp"
+            android:text="fdgshdfhg"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/colorText"
             android:textAlignment="center"/>
 
-</FrameLayout>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:id="@+id/iv_mission_patch_big"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/tv_launch_date_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/launch_date"
+                    android:textSize="12sp"
+                    android:paddingStart="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"/>
+
+            <TextView
+                    android:id="@+id/tv_launch_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="dsfsdf"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"/>
+
+            <TextView
+                    android:id="@+id/tv_rocket_name_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rocket_name"
+                    android:textSize="12sp"
+                    android:paddingStart="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"/>
+
+            <TextView
+                    android:id="@+id/tv_rocket_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="dsfsdf"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"/>
+
+            <TextView
+                    android:id="@+id/tv_site_name_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/site_name"
+                    android:textSize="12sp"
+                    android:paddingStart="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"/>
+
+            <TextView
+                    android:id="@+id/tv_site_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="dsfsdf"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:maxLines="8"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"/>
+
+            <TextView
+                    android:id="@+id/tv_launch_success_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/launch_success"
+                    android:textSize="12sp"
+                    android:paddingStart="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"/>
+
+            <TextView
+                    android:id="@+id/tv_launch_success"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="dsfsdf"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"/>
+
+            <TextView
+                    android:id="@+id/tv_details_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details"
+                    android:textSize="12sp"
+                    android:paddingStart="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"/>
+
+            <TextView
+                    android:id="@+id/tv_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="dsfsdf"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:maxLines="15"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"/>
+
+            <TextView
+                    android:id="@+id/tv_photo_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/photo"
+                    android:textSize="12sp"
+                    android:paddingStart="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorText"/>
+
+            <ImageView
+                    android:id="@+id/iv_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:contentDescription="@string/launch_image"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
